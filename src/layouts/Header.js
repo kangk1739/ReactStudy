@@ -24,22 +24,13 @@ const Header = () => {
   const Handletoggle = () => {
     setIsOpen(!isOpen);
   };
-  const showMobilemenu = () => {
-    document.getElementById("sidebarArea").classList.toggle("showSidebar");
-  };
+
   return (
     <Navbar color="dark" dark expand="md">
       <div className="d-flex align-items-center">
         <NavbarBrand href="/" className="d-lg-none">
           <LogoWhite />
         </NavbarBrand>
-        <Button
-          color="dark"
-          className="d-lg-none"
-          onClick={() => showMobilemenu()}
-        >
-          <i className="bi bi-list"></i>
-        </Button>
       </div>
       <div className="hstack gap-2">
         <Button
@@ -48,35 +39,53 @@ const Header = () => {
           className="d-sm-block d-md-none"
           onClick={Handletoggle}
         >
-          {isOpen ? (
-            <i className="bi bi-x"></i>
-          ) : (
-            <i className="bi bi-three-dots-vertical"></i>
-          )}
+         <i className="bi bi-list"></i>
         </Button>
       </div>
 
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
+
           <NavItem>
-            <Link to="/starter" className="nav-link">
-              Starter
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/about" className="nav-link">
-              About
+            <Link to="/reactStudy" className="nav-link">
+              React Study
             </Link>
           </NavItem>
           <UncontrolledDropdown inNavbar nav>
             <DropdownToggle caret nav>
-              DD Menu
+            Template Menu
             </DropdownToggle>
             <DropdownMenu end>
-              <DropdownItem>Option 1</DropdownItem>
-              <DropdownItem>Option 2</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Reset</DropdownItem>
+              <DropdownItem href="/#/starter">
+                Dashboard
+              </DropdownItem>
+              <DropdownItem href="/#/about">
+                About
+              </DropdownItem>
+              <DropdownItem href="/#/alerts">
+                Alert
+              </DropdownItem>
+              <DropdownItem href="/#/badges">
+                Badegs
+              </DropdownItem>
+              <DropdownItem href="/#/buttons">
+                Buttons
+              </DropdownItem>
+              <DropdownItem href="/#/cards">
+                Cards
+              </DropdownItem>
+              <DropdownItem href="/#/grid">
+                Grid
+              </DropdownItem>
+              <DropdownItem href="/#/table">
+                Table
+              </DropdownItem>
+              <DropdownItem href="/#/forms">
+                Forms
+              </DropdownItem>
+              <DropdownItem href="/#/breadcrumbs">
+                Breadcrums
+              </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
@@ -90,13 +99,13 @@ const Header = () => {
             ></img>
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem header>Info</DropdownItem>
-            <DropdownItem>My Account</DropdownItem>
-            <DropdownItem>Edit Profile</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>My Balance</DropdownItem>
-            <DropdownItem>Inbox</DropdownItem>
-            <DropdownItem>Logout</DropdownItem>
+            <DropdownItem to="" header>Info</DropdownItem>
+            <DropdownItem to="">My Account</DropdownItem>
+            <DropdownItem to="">Edit Profile</DropdownItem>
+            <DropdownItem to="" divider />
+            <DropdownItem to="">My Balance</DropdownItem>
+            <DropdownItem to="">Inbox</DropdownItem>
+            <DropdownItem to="">Logout</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </Collapse>

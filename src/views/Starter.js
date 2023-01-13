@@ -2,6 +2,7 @@ import { Col, Row } from "reactstrap";
 import SalesChart from "../components/dashboard/SalesChart";
 import Feeds from "../components/dashboard/Feeds";
 import ProjectTables from "../components/dashboard/ProjectTable";
+import DefaultPageButton from "../components/dashboard/DefaultPageButton";
 import TopCards from "../components/dashboard/TopCards";
 import Blog from "../components/dashboard/Blog";
 import bg1 from "../assets/images/bg/bg1.jpg";
@@ -49,6 +50,11 @@ const Starter = () => {
     <div>
       {/***Top Cards***/}
       <Row>
+        <Col>
+          <DefaultPageButton />
+        </Col>
+      </Row>
+      <Row>
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-success text-success"
@@ -85,8 +91,7 @@ const Starter = () => {
             icon="bi bi-bag"
           />
         </Col>
-      </Row>
-      {/***Sales & Feed***/}
+      </Row>      {/***Sales & Feed***/}
       <Row>
         <Col xxl="12">
           <SalesChart />
