@@ -13,12 +13,12 @@ https://www.wrappixel.com/templates
 
 
 ### `템플릿 덮어쓰기 후 오류발생`
-오류내용: module not found: error: can't resolve 'react-router-dom'
+오류내용: module not found: error: can't resolve 'react-router-dom'<br/>
 npm install react-router-dom --save
-<br/>
-오류내용: Error: error:0308010C:digital envelope routines::unsupported
+<br/><br/>
+오류내용: Error: error:0308010C:digital envelope routines::unsupported<br/>
 npm install react-scripts@5.0.1 --save
-<br/>
+<br/><br/>
 react-router-dom, react-scripts 높은 버전으로 재설치해서 오류해결
 
 <br/>
